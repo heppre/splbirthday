@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Spl Birthday</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet">
+<style>
+  
+.gallery {
+  --s: 130px; /* control the size of the images*/
+  
+  display: grid;
+  place-content: center;
+  gap: 5px;
+  position: relative;
+}
+.gallery input {
+  position: absolute;
+  z-index: 1;
+  border-radius: 50%;
+  inset: calc(50% - var(--s)/3);
+  cursor: pointer;
+  --g: linear-gradient(#fff 0 0) no-repeat;
+  background: var(--g) 50%/60% 3px,var(--g) 50%/3px 60%,#222;
+  transition: 1.5s;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.gallery > img {
+  width: var(--s);
+  aspect-ratio: 1;
+  grid-area: 1/1;
+  border-radius: 50%;
+  object-fit: cover;
+  transform: scale(.5);
+  transition: 1s calc((var(--i) - 1)*.1s);
+}
+.gallery > img:nth-of-type(1) {--i:1;}
+.gallery > img:nth-of-type(2) {--i:2;}
+.gallery > img:nth-of-type(3) {--i:3;}
+.gallery > img:nth-of-type(4) {--i:4;}
+.gallery > img:nth-of-type(5) {--i:5;}
+.gallery > img:nth-of-type(6) {--i:6;}
+.gallery > img:nth-of-type(7) {--i:7;}
+.gallery > img:nth-of-type(8) {--i:8;}
+.gallery > img:nth-of-type(9) {--i:9;}
+
+.gallery > input:checked ~ img {
+  transform: 
+    rotate(calc(var(--i)* 360deg/8)) translate(calc(1.5*var(--s))) 
+    rotate(calc(var(--i)*-360deg/8));
+}
+.gallery > input:checked {
+  transform: rotate(135deg)
+}
+.gallery > input
+{
+  display: block;
+}
+body,h1,h2{font-family: "Raleway", sans-serif}
+body, html {height: 100%}
+p {line-height: 2}
+.bgimg, .bgimg2 {
+  min-height: 100%;
+    background-position: center;
+    background-size: contain,cover;
+    background-repeat: no-repeat;
+}
+.bgimg {background-image: url("./shadow.jpeg"),url("./black.jpg")}
+.bgimg2 {background-image: url("./drawing.jpg");
+background-size: cover !important;}
+</style>
+</head>
+<body>
+
+<!-- Header / Home-->
+<header class="w3-display-container w3-wide bgimg w3-grayscale-min" id="home">
+  <div class="w3-display-middle w3-text-white w3-center">
+    <h1 class="w3-jumbo">Happiee Birthday</h1>
+    <h2>...Thangamey...</h2>
+    <h2><b>15.12.2023</b></h2>
+  </div>
+</header>
+
+<!-- Navbar (sticky bottom) -->
+<!-- <div class="w3-bottom w3-hide-small">
+  <div class="w3-bar w3-white w3-center w3-padding w3-opacity-min w3-hover-opacity-off">
+    <a href="#home" style="width:25%" class="w3-bar-item w3-button">Home</a>
+    <a href="#us" style="width:25%" class="w3-bar-item w3-button">Jane & John</a>
+    <a href="#wedding" style="width:25%" class="w3-bar-item w3-button">Wedding</a>
+    <a href="#rsvp" style="width:25%" class="w3-bar-item w3-button w3-hover-black">RSVP</a>
+  </div>
+</div> -->
+
+<!-- About / Jane And John -->
+<div class="w3-container w3-padding-64 w3-pale-red w3-grayscale-min" id="us">
+  <div class="w3-content">
+    <h1 class="w3-center w3-text-grey"><b>my 11:11  &nbsp; <i class="ri-infinity-line"></i></b></h1>
+    <img class="w3-round w3-grayscale-min" src="./collage.jpg" style="width:100%;margin:32px 0">
+    <p><i>Happiest Birthday My Love.I love u soooooooo sooooooooooooooo much. Now my venna is stepping into 27. Periya paragraph ah eludhuna padipiya nu therla seriiii eludhuvoo.
+      I want you to be always happy with me.This is a small gift from me. <br>
+      Ennaku romba guilt actually nee pudicha velaiya vittu ennala un career spoil aagirchu nu.
+      So Ipo again unnaku pudichadha padikira Happy for U. Seekiro nalla job poo. Ennala mudinja vara support pannatatiyu nee padika unnaku ellam comfortable ah irukkanum nu aasai mudinja vara try pandre to fullfill.
+      Ennaku I want U to Grow higher adhuku  padika unnaku avasiyam anadhu irukkanum nu ninache. Nalla padi seekiro nalla job poitu enna kalyanam panniko.This is my biggest wish.
+      All the best for ur future!
+    </i>
+    </p><br>
+    <p class="w3-center"><a href="#wedding" class="w3-button w3-black w3-round w3-padding-large w3-large">HAPPINESS</a></p>
+  </div>
+</div>
+
+<!-- Background photo -->
+<div class="w3-display-container bgimg2">
+  <!-- <div class="w3-display-middle w3-text-white w3-center">
+    <h1 class="w3-jumbo">You Are Invited</h1><br>
+    <h2>Of course..</h2> -->
+  </div>
+</div>
+
+<!-- Wedding information -->
+<div class="w3-container w3-padding-64 w3-pale-red  w3-center" id="wedding">
+  <div class="w3-content">
+    <h1 class="w3-text-grey"><b>HAPPINESS</b></h1>
+    <img class="w3-round-large " src="./20231214_130930-COLLAGE.jpg" style="width:100%;margin:64px 0">
+    <div class="w3-row">
+      <div class="w3-half">
+        <h2>#Love U 2 The Moon And Back!</h2>
+        <h2><br></h2>
+        <h2>#I can't Imagine my Life without U!</h2>
+        <h2><br></h2>
+        <h2>#When I count my Blessings I count U twice!</h2>
+      </div>
+      <div class="w3-half">
+        <h2><br></h2>
+        <h2>#U will Always b my Forever!</h2>
+        <h2><br></h2>
+        <h2>#Forever Urs!</h2>
+        <h2><br></h2>
+        <h2>#Serii podhum I love u so much avlo dhaa!</h2>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="gall" style="display: grid;place-content: center; background-color: #ffdddd!important;">
+  <div class="gallery w3-half">
+    <input type="checkbox">
+    <img src="./1.jpg" alt="a forest after an apocalypse">
+    <img src="./4.jpg" alt="a waterfall and many rocks">
+    <img src="./towerpk.jpg" alt="a house on a mountain">
+    <img src="2.jpg" alt="sime pink flowers">
+    <img src="./3.jpg" alt="big rocks with some trees">
+    <img src="./parkpink.jpg" alt="a waterfall, a lot of tree and a great view from the sky">
+    <img src="./6.jpg" alt="a cool landscape">
+    <img src="./7.jpg" alt="inside a town between two big buildings">
+  </div>
+  </div>
+
+<!-- RSVP section -->
+<div class="w3-container w3-padding-64 w3-pale-red w3-center w3-wide" id="rsvp">
+  <h1>HOPE YOU LIKE THIS!</h1>
+  <p class="w3-large">Hope U have a Great Day With Me!</p>
+  <p>This is Ur 1st Birthday namma Commit aagi. Edhe maari onna neraiya Birthday celebrate pannanum.</p>
+  <p class="w3-xlarge">
+    <!-- <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-round w3-red w3-opacity w3-hover-opacity-off" style="padding:8px 60px">RSVP</button> -->
+  </p>
+</div>
+
+<!-- RSVP modal -->
+<!-- <div id="id01" class="w3-modal">
+  <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="padding:32px;max-width:600px">
+    <div class="w3-container w3-white w3-center">
+      <h1 class="w3-wide">CAN YOU COME?</h1>
+      <p>We really hope you can make it.</p>
+      <form>
+        <input class="w3-input w3-border" type="text" placeholder="Name(s)" name="name">
+      </form>
+      <p><i>Sincerely, John & Jane</i></p>
+      <div class="w3-row">
+        <div class="w3-half">
+          <button onclick="document.getElementById('id01').style.display='none'" type="button" class="w3-button w3-block w3-green">Going</button>
+        </div>
+        <div class="w3-half">
+          <button onclick="document.getElementById('id01').style.display='none'" type="button" class="w3-button w3-block w3-red">Can't come</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-16">
+  <p class="w3-hover-text-green">Arokia Felix & Hepzibah Preethi</p>
+  <p style="font-family: cursive; font-size: 18px;">Together Forever</p>
+</footer>
+<div class="w3-hide-small" style="margin-bottom:32px"> </div>
+
+</body>
+</html>
